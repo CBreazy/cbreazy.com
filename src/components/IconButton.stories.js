@@ -5,6 +5,12 @@ import IconButton from './IconButton';
 const storyConfig = {
   title: 'Components/IconButton',
   component: IconButton,
+  argTypes: { // Define argTypes for Controls
+    disabled: {
+        control: 'boolean',
+        description: 'Sets the button to a disabled state.',
+      },
+  },
 };
 
 export default storyConfig;

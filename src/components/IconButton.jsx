@@ -1,6 +1,11 @@
-const IconButton = ({ children }) => {
+const IconButton = ({ children, disabled }) => {
   return (
-    <button className="bg-black text-white px-4 py-2 rounded-md font-medium flex items-center hover:bg-gray-700 focus:bg-gray-600 active:bg-gray-900">
+    <button
+      className={`bg-neutral-800 text-white px-4 py-2 rounded-md font-medium flex items-center ${
+        disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-neutral-700 focus:bg-neutral-600 active:bg-neutral-900'
+      }`}
+      disabled={disabled}
+    >
       <span className="mr-2 text-xl">+</span> {children}
     </button>
   );

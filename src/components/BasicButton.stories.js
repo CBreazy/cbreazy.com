@@ -5,6 +5,12 @@ import BasicButton from './BasicButton';
 const storyConfig = {
   title: 'Components/BasicButton',
   component: BasicButton,
+  argTypes: { // Define argTypes for Controls
+    disabled: {
+        control: 'boolean',
+        description: 'Sets the button to a disabled state.',
+      },
+  },
 };
 
 const Template = (args) => <BasicButton {...args} />;
@@ -25,13 +31,6 @@ export const Third = Template.bind({});
 Third.args = {
   children: 'THE THIRD',
   variant: 'third',
-};
-
-export const DisabledPrimary = Template.bind({});
-DisabledPrimary.args = {
-  children: 'PRIMARY',
-  variant: 'primary',
-  disabled: true,
 };
 
 export default storyConfig;

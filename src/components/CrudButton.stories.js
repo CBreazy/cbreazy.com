@@ -5,6 +5,12 @@ import CrudButton from './CrudButton';
 const storyConfig = {
   title: 'Components/CrudButton',
   component: CrudButton,
+  argTypes: { // Define argTypes for Controls
+    disabled: {
+        control: 'boolean',
+        description: 'Sets the button to a disabled state.',
+      },
+  },
 };
 
 export default storyConfig;
