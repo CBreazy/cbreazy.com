@@ -17,8 +17,6 @@ module.exports = {
           // Add your custom fonts here
           // 'sans': ['Graphik', 'sans-serif'],
           // 'mono': ['Space Mono', 'monospace'],
-            'nudista': ["Nudista", "sans-serif"],
-            'vcr-osd-mono': ["VCR OSD Mono", "sans-serif"],
    
         },
         spacing: {
