@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## AY YO!
 
-## Getting Started
+Aight, listen up, this ain't no lullaby, it's a Next.js project, straight from the digital trenches. Built with `create-next-app`, understand? Cbreazy style, no fluff, just raw code.
 
-First, run the development server:
+## Start the Engine
+
+To get this beast runnin' you gotta fire up the dev server.
 
 ```bash
 npm run dev
@@ -14,30 +16,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Hit http://localhost:3000 in your browser. That's where the magic happens.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Edit app/page.js, watch the changes live.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next/font's slingin' Geist, optimized font, straight up.
 
-## Deployed Subdomains
-The following subdomains have been deployed as part of this project:
+## Subdomain Strongholds:
 
-- Portfolio: https://cbreazy.com
-- Plate Calculator: https://plates.cbreazy.com
-- Storybook: https://storybook.cbreazy.com
+- Portfolio: https://cbreazy.com – That's where the skills reside.
+- Plate Calculator: https://plates.cbreazy.com – Calculations, digital style.
+- Storybook: https://storybook.cbreazy.com – Stories from the code.
 
-## Learn More
+## Knowledge Drops:
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs) – Learn the ins and outs, kid.
+- [Learn Next.js](https://nextjs.org/learn) - Interactive lessons, get your knowledge up.
+- [the Next.js GitHub repository](https://github.com/vercel/next.js) - Feedback and contributions, step up.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Vercel Deployment, The Final Move:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel Platform's the easy way to deploy. Check the Next.js deployment docs for the details. Cbreazy, Tha Ghostface Killah of code, droppin' the facts. Vercel's the platform, period.
