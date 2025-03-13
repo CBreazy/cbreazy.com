@@ -28,3 +28,7 @@ body {
 .test {
   @apply border border-red-700;
 }
+
+.font-nudista {
+  font-family: var(--font-nudista), sans-serif !important;
+}
