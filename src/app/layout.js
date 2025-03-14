@@ -41,16 +41,36 @@ const vcr_osd_mono = localFont({
 });
 
 export const metadata = {
-  title: "Brown Creative Company",
-  description: "Web application development and design",
-  image: "/bccLogoScreenshot.png",
-  url: "https://browncreativecompany.com",
-  type: "website",
-  siteName: "Brown Creative Company",
-  date: "2022-01-01",
-  keywords: ["web development", "design", "web design", "web development", "software development", "software design"],
+  title: "Chris Brown | Full Stack Developer | UI/UX Specialist", // More specific title
+  description: "Full stack developer specializing in UI/UX design and frontend development. Building high-performance, user-friendly web applications with React, Next.js, and more.", // Detailed description
+  openGraph: {
+    title: "Chris Brown | Full Stack Developer | UI/UX Specialist",
+    description: "Full stack developer specializing in UI/UX design and frontend development. Building high-performance, user-friendly web applications with React, Next.js, and more.",
+    url: "https://cbreazy.com", // Use your domain
+    siteName: "Chris Brown Portfolio", // Clear site name
+    images: [
+      {
+        url: "/bccLogoScreenshot.png", // Use absolute URL if possible
+        width: 1200, // Recommended OG image size
+        height: 630,
+        alt: "Chris Brown Portfolio Screenshot",
+      },
+    ],
+    type: "website",
+    locale: "en_US", // Specify locale
+  },
+  twitter: {
+    card: "summary_large_image", // Use large image for Twitter
+    title: "Chris Brown | Full Stack Developer | UI/UX Specialist",
+    description: "Full stack developer specializing in UI/UX design and frontend development. Building high-performance, user-friendly web applications with React, Next.js, and more.",
+    images: ["/bccLogoScreenshot.png"], // Use absolute URL if possible
+  },
+  alternates: {
+    canonical: "https://cbreazy.com", // Use your domain
+  },
+  keywords: ["full stack developer", "ui/ux design", "frontend development", "react", "next.js", "web applications", "portfolio", "javascript", "php", "mysql"], // More relevant keywords
   icons: {
-    icon: '/favicon.ico', // Add the favicon here
+    icon: '/favicon.ico',
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
     other: {
