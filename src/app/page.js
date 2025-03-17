@@ -14,6 +14,8 @@ export default function Home() {
             width={192} // Set the width of the image
             height={192} // Set the height of the image
             className="w-full h-full object-cover"
+            priority={true} // Optional: to load the image with priority
+            loading="eager" // Optional: to load the image eagerly
           />
         </div>
         <h1 className="text-4xl font-bold mb-4">Chris Brown</h1>
