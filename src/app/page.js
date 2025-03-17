@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import Project from '@/components/Project';
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-24">
+      {/* bio */}
       <section className="text-center mb-16">
         <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-8">
           {/* headshot */}
@@ -28,6 +30,34 @@ export default function Home() {
         </a>
       </section>
 
+      {/* recent projects */}
+      <section className="mb-16">
+        {/* plate-calculator */}
+        <Project
+            title="Plate Calculator"
+            screenshots={[
+              { src: '/assets/images/projects/plate-calculator/plate-calculator-og.png', alt: 'Plate Calculator Screenshot' },
+            ]}
+            subheading="Calculate weightlifting plate combinations quickly and easily. Determine the exact plates needed for your desired weight. Built with Vite, React, and TypeScript."
+            technologies={['Bolt', 'TypeScript', 'HTML5', 'JavaScript', 'React', 'Tailwind CSS', 'Vite']}        
+            description="I wanted to try a prompt-based development environment, so I built this project using Bolt. I really love barbell training in my spare time and goodplate calculators are hard to find! They are generally hidden behind paywalls, or crammed with ads.
+            This was a project I have toyed around with in various stages and iterations for many years, but never completed. I gave Bolt a prompt and it delivered the MVP in seconds. I have since used a combinations of prompts and manual coding to add features and polish the app. I plan to continue to iterate on this project and add more features in the future."
+        />
+
+        {/* xenith.com */}
+        <Project
+            title="Xenith.com Migration & UI Facelift"
+            screenshots={[
+              { src: '/assets/images/projects/xenith.com/home_desktop.jpg', alt: 'Xenith.com Home Screenshot' },
+            ]}
+            subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience. Implemented a new design system for a modernized look and feel."
+            technologies={['Craft CMS', 'Craft Commerce', 'HTML5', 'JavaScript', 'Tailwind CSS', 'PHP', 'MySQL', 'Twig', 'Git']}
+            integrations={['Stripe', 'Google Tag Manager', 'Klaviyo', 'Attentive']}
+            description="My role on this project was to handle all things Frontend. A detailed write up and cleansed code samples will be available soon."
+        />
+      </section>
+
+      {/* skills */}
       <section className="mb-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">Key Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
