@@ -7,7 +7,7 @@ export default function Home() {
         <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-8">
           {/* headshot */}
           <Image
-            src="/IMG_3117.jpg" // src of the image
+            src="/assets/images/headshots/IMG_3117.jpg" // src of the image
             alt="Chris Brown Headshot"
             width={192} // Set the width of the image
             height={192} // Set the height of the image
