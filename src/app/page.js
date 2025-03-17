@@ -32,6 +32,7 @@ export default function Home() {
 
       {/* recent projects */}
       <section className="mb-16">
+      <h2 className="text-2xl font-semibold mb-4 text-center">Recent Projects</h2>
         {/* plate-calculator */}
         <Project
             title="Plate Calculator"

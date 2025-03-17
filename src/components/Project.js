@@ -4,7 +4,7 @@ export default function Project({ title, screenshots, subheading, technologies, 
     return (
       <div className="w-full mb-12">
         {/* title */}
-        <h3 className="text-2xl font-nudista font-bold mb-2">{title}</h3>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
         {/* subheading */}
         <p className="mb-4 leading-tight">{subheading}</p>
 
