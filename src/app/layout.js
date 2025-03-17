@@ -70,14 +70,15 @@ export const metadata = {
   },
   keywords: ["full stack developer", "ui/ux design", "frontend development", "react", "next.js", "web applications", "portfolio", "javascript", "php", "mysql"], // More relevant keywords
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/assets/images/icons/favicon.ico',
+    shortcut: '/assets/images/icons/favicon.ico',
+    apple: '/assets/images/icons/apple-touch-icon.png',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon.png',
+      url: '/assets/images/icons/apple-touch-icon.png',
     },
   },
+  metadataBase: new URL('https://cbreazy.com'),
 };
 
 export default function RootLayout({ children }) {
