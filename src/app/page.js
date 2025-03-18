@@ -60,11 +60,22 @@ export default function Home() {
             "Tailwind CSS",
             "Vite",
           ]}
-          description="I wanted to try a prompt-based development environment, so I built this project using Bolt. I really love barbell training in my spare time and goodplate calculators are hard to find! They are generally hidden behind paywalls, or crammed with ads.
-            This was a project I have toyed around with in various stages and iterations for many years, but never completed. I gave Bolt a prompt and it delivered the MVP in seconds. I have since used a combinations of prompts and manual coding to add features and polish the app. I plan to continue to iterate on this project and add more features in the future."
+          description={
+            <div>
+              <p>
+                This was a project I have toyed around with in various stages and iterations for many years, but never completed. I also was curious about prompt-based development environments, so I decided to give Bolt a try and built this. I really love barbell training in my spare time and <strong>good plate calculators are hard to find!</strong> They are generally hidden behind paywalls or crammed with ads. I gave Bolt a single-sentence prompt and it delivered the MVP in seconds!
+              </p>
+
+              <br/>
+
+              <p>
+                I have since used a combinations of prompts and manual coding to add features and polish the app. I plan to continue to iterate on this project and add more features in the future.
+              </p>
+            </div>
+          }
         />
 
-        {/* xenith.com */}
+        {/* ------------ xenith.com --------------- */}
         <Project
           title="Xenith.com Migration & UI Facelift"
           screenshots={[
@@ -72,8 +83,20 @@ export default function Home() {
               src: "/assets/images/projects/xenith.com/home_desktop.jpg",
               alt: "Xenith.com Home Screenshot",
             },
+            {
+              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
+              alt: "Xenith.com Home Mobile Screenshot",
+            },
+            {
+              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
+              alt: "Xenith.com Home Screenshot",
+            },
+            {
+              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
+              alt: "Xenith.com Home Screenshot",
+            }
           ]}
-          subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience. Implemented a new design system for a modernized look and feel."
+          subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience."
           technologies={[
             "Craft CMS",
             "Craft Commerce",
@@ -91,7 +114,16 @@ export default function Home() {
             "Klaviyo",
             "Attentive",
           ]}
-          description="My role on this project was to handle all things Frontend. A detailed write up and cleansed code samples will be available soon."
+          description=
+          {
+            <div>
+              <p>The Xenith project involved the development of a new e-commerce website for Xenith, LLC., a leading American Football sports equipment manufacturer. The goal was to transition the site to a platform that allowed for more custom feature development creating a modern, user-friendly online store that would enhance the customer experience and drive sales. As the front-end developer on the Xenith project, I was responsible for refining and implementing the user interface, developing interactive components, and ensuring a responsive design across various devices.</p>
+              <br/>
+              <p>When the front-end work stabilized, I identified opportunities to contribute to the back-end and took on tasks like handling various API integrations, writing Twig extensions, POSTing to Controllers and writing services to process that data, as well as other server side logic to extend Craft CMS. This allowed me to contribute to both the user-facing and server-side aspects of the project, ensuring a robust and efficient e-commerce platform.</p>
+              <br/>
+              <p>I also learned a ton! On the technical side of things there was only a two man team to deliver this and an accompanying B2B portal (which due to NDA's I can't discuss). Because of this small team, I sat-in on all the architecture brainstorming for the entire multi-site project and contributed where approppriate. This was a more "traditional" LAMP stack which is not very popular anymore. The new ecommerce site launched in 2023 and was supported through the end of 2024.</p>
+            </div>
+          }
         />
       </section>
 

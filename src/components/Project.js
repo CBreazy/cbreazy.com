@@ -6,19 +6,15 @@ export default function Project({ title, screenshots, subheading, technologies, 
         {/* title */}
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         {/* subheading */}
-        <p className="mb-4 leading-tight">{subheading}</p>
+        <p className="mb-4"><span className="font-bold">Task: </span>{subheading}</p>
 
-        {/* technologies */}
+        {/* technologies & integrations*/}
         {technologies && <hr className="mb-4" />}
         {technologies && <div className="flex flex-wrap justify-center gap-4 my-8">
             {technologies && technologies.map((tech, index) => (
                 <span key={index} className="bg-yellow-500 px-3 py-1.5 rounded-full font-nudista text-xs text-neutral-900">{tech}</span>
             ))}
-        </div>}
 
-        {/* integrations */}
-        {integrations && <hr className="mb-4" />}
-        {integrations && <div className="flex flex-wrap justify-center gap-4 my-8">
             {integrations && integrations.map((integration, index) => (
                 <span key={index} className="bg-purple-800 px-3 py-1.5 rounded-full font-nudista text-xs text-neutral-200">{integration}</span>
             ))}
