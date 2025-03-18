@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Project from '@/components/Project';
-import SkillsPill from '@/components/SkillsPill';
+import Image from "next/image";
+import Project from "@/components/Project";
+import SkillPill from "@/components/SkillPill";
 
 export default function Home() {
   return (
@@ -22,7 +22,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">Chris Brown</h1>
         <p className="text-lg mb-8">Full Stack Developer | UI/UX Specialist</p>
         <p className="text-base mb-8 max-w-2xl">
-          A full stack developer specializing in frontend UI development and design. Over five years of experience building visually appealing and high-performance web applications.
+          A full stack developer specializing in frontend UI development and
+          design. Over five years of experience building visually appealing and
+          high-performance web applications.
         </p>
         {/* email */}
         <a
@@ -35,29 +37,61 @@ export default function Home() {
 
       {/* recent projects */}
       <section className="mb-16">
-      <h2 className="text-2xl font-semibold mb-4 text-center">Recent Projects</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Recent Work
+        </h2>
+
         {/* plate-calculator */}
         <Project
-            title="Plate Calculator"
-            screenshots={[
-              { src: '/assets/images/projects/plate-calculator/plate-calculator-og.png', alt: 'Plate Calculator Screenshot' },
-            ]}
-            subheading="Calculate weightlifting plate combinations quickly and easily. Determine the exact plates needed for your desired weight. Built with Vite, React, and TypeScript."
-            technologies={['Bolt', 'TypeScript', 'HTML5', 'JavaScript', 'React', 'Tailwind CSS', 'Vite']}        
-            description="I wanted to try a prompt-based development environment, so I built this project using Bolt. I really love barbell training in my spare time and goodplate calculators are hard to find! They are generally hidden behind paywalls, or crammed with ads.
+          title="Plate Calculator"
+          screenshots={[
+            {
+              src: "/assets/images/projects/plate-calculator/plate-calculator-og.png",
+              alt: "Plate Calculator Screenshot",
+            },
+          ]}
+          subheading="Calculate weightlifting plate combinations quickly and easily. Determine the exact plates needed for your desired weight. Built with Vite, React, and TypeScript."
+          technologies={[
+            "Bolt",
+            "TypeScript",
+            "HTML5",
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "Vite",
+          ]}
+          description="I wanted to try a prompt-based development environment, so I built this project using Bolt. I really love barbell training in my spare time and goodplate calculators are hard to find! They are generally hidden behind paywalls, or crammed with ads.
             This was a project I have toyed around with in various stages and iterations for many years, but never completed. I gave Bolt a prompt and it delivered the MVP in seconds. I have since used a combinations of prompts and manual coding to add features and polish the app. I plan to continue to iterate on this project and add more features in the future."
         />
 
         {/* xenith.com */}
         <Project
-            title="Xenith.com Migration & UI Facelift"
-            screenshots={[
-              { src: '/assets/images/projects/xenith.com/home_desktop.jpg', alt: 'Xenith.com Home Screenshot' },
-            ]}
-            subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience. Implemented a new design system for a modernized look and feel."
-            technologies={['Craft CMS', 'Craft Commerce', 'HTML5', 'JavaScript', 'Tailwind CSS', 'PHP', 'MySQL', 'Twig', 'Git']}
-            integrations={['Stripe', 'Google Tag Manager', 'Klaviyo', 'Attentive']}
-            description="My role on this project was to handle all things Frontend. A detailed write up and cleansed code samples will be available soon."
+          title="Xenith.com Migration & UI Facelift"
+          screenshots={[
+            {
+              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
+              alt: "Xenith.com Home Screenshot",
+            },
+          ]}
+          subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience. Implemented a new design system for a modernized look and feel."
+          technologies={[
+            "Craft CMS",
+            "Craft Commerce",
+            "HTML5",
+            "JavaScript",
+            "Tailwind CSS",
+            "PHP",
+            "MySQL",
+            "Twig",
+            "Git",
+          ]}
+          integrations={[
+            "Stripe",
+            "Google Tag Manager",
+            "Klaviyo",
+            "Attentive",
+          ]}
+          description="My role on this project was to handle all things Frontend. A detailed write up and cleansed code samples will be available soon."
         />
       </section>
 
@@ -66,25 +100,49 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-4">Key Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Frontend Skills */}
-          <SkillsPill skill="React"></SkillsPill>
-          <SkillsPill skill="Next.js"></SkillsPill>
-          <SkillsPill skill="Tailwind CSS"></SkillsPill>
-          <SkillsPill skill="HTML5"></SkillsPill>
-          <SkillsPill skill="CSS3/SCSS"></SkillsPill>
-          <SkillsPill skill="JavaScript"></SkillsPill>
-          <SkillsPill skill="UI/UX Design"></SkillsPill>
+          {(() => {
+            const frontendSkills = [
+              "React",
+              "Next.js",
+              "Tailwind CSS",
+              "HTML5",
+              "CSS3/SCSS",
+              "JavaScript",
+              "UI/UX Design",
+            ];
+            return frontendSkills.map((skill) => (
+              <SkillPill key={skill} skill={skill} />
+            ));
+          })()}
+
           {/* Backend Skills */}
-          <SkillsPill skill="PHP"></SkillsPill>
-          <SkillsPill skill="MySQL"></SkillsPill>
-          <SkillsPill skill="REST APIs"></SkillsPill>
-          <SkillsPill skill="Craft CMS"></SkillsPill>
-          <SkillsPill skill="WordPress"></SkillsPill>
-          <SkillsPill skill="Git"></SkillsPill>
-          <SkillsPill skill="Agile"></SkillsPill>
+          {(() => {
+            const backendSkills = [
+              "Node.js",
+              "Express",
+              "PHP",
+              "MySQL",
+              "REST APIs",
+              "Craft CMS",
+              "WordPress",
+              "Git",
+              "Agile",
+            ];
+            return backendSkills.map((skill) => (
+              <SkillPill key={skill} skill={skill} />
+            ));
+          })()}
           {/* E-commerce & Analytics */}
-          <SkillsPill skill="Stripe"></SkillsPill>
-          <SkillsPill skill="Google Tag Manager"></SkillsPill>
-          <SkillsPill skill="Performance Optimization"></SkillsPill>
+          {(() => {
+            const ecommerceSkills = [
+              "Stripe",
+              "Google Tag Manager",
+              "Performance Optimization",
+            ];
+            return ecommerceSkills.map((skill) => (
+              <SkillPill key={skill} skill={skill} />
+            ));
+          })()}
           {/* Add more skills as needed */}
         </div>
       </section>
@@ -92,7 +150,12 @@ export default function Home() {
       <section className="mb-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-base max-w-2xl">
-          I am a full stack developer with a passion for creating exceptional user interfaces and experiences. With a strong foundation in both frontend and backend technologies, I deliver comprehensive web solutions that are both functional and visually stunning.
+          I am a full stack developer with a passion for creating exceptional
+          user interfaces and experiences. With a strong foundation in both
+          frontend and backend technologies, I deliver comprehensive web
+          solutions that are both functional and visually stunning. Most of all,
+          I am a problem solver and task oriented person. I am always eager to
+          learn new technologies and improve my skills. I am also a real human!
         </p>
       </section>
 

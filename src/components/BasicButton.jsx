@@ -34,7 +34,7 @@ const BasicButton = ({ children, disabled, variant }) => {
 
   return (
     <button
-      className={`px-4 py-2 rounded-md font-medium ${
+      className={`px-4 py-2 rounded-md font-nudista font-bold uppercase ${
         variantClasses[variant] || ''
       } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       disabled={disabled}
