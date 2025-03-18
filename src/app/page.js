@@ -1,5 +1,6 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import Project from '@/components/Project';
+import SkillsPill from '@/components/SkillsPill';
 
 export default function Home() {
   return (
@@ -65,27 +66,25 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-4">Key Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Frontend Skills */}
-          <span className="bg-gray-200 px-4 py-2 rounded-full">React</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Next.js</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Tailwind CSS</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">UI/UX Design</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">HTML5</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">CSS3/SCSS</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">JavaScript</span>
-
+          <SkillsPill skill="React"></SkillsPill>
+          <SkillsPill skill="Next.js"></SkillsPill>
+          <SkillsPill skill="Tailwind CSS"></SkillsPill>
+          <SkillsPill skill="HTML5"></SkillsPill>
+          <SkillsPill skill="CSS3/SCSS"></SkillsPill>
+          <SkillsPill skill="JavaScript"></SkillsPill>
+          <SkillsPill skill="UI/UX Design"></SkillsPill>
           {/* Backend Skills */}
-          <span className="bg-gray-200 px-4 py-2 rounded-full">PHP</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">MySQL</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">REST APIs</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Craft CMS</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">WordPress</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Git</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Agile</span>
-
+          <SkillsPill skill="PHP"></SkillsPill>
+          <SkillsPill skill="MySQL"></SkillsPill>
+          <SkillsPill skill="REST APIs"></SkillsPill>
+          <SkillsPill skill="Craft CMS"></SkillsPill>
+          <SkillsPill skill="WordPress"></SkillsPill>
+          <SkillsPill skill="Git"></SkillsPill>
+          <SkillsPill skill="Agile"></SkillsPill>
           {/* E-commerce & Analytics */}
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Stripe</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Google Tag Manager</span>
-          <span className="bg-gray-200 px-4 py-2 rounded-full">Performance Optimization</span>
+          <SkillsPill skill="Stripe"></SkillsPill>
+          <SkillsPill skill="Google Tag Manager"></SkillsPill>
+          <SkillsPill skill="Performance Optimization"></SkillsPill>
           {/* Add more skills as needed */}
         </div>
       </section>

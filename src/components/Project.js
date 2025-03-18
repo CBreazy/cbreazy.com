@@ -12,7 +12,7 @@ export default function Project({ title, screenshots, subheading, technologies, 
         {technologies && <hr className="mb-4" />}
         {technologies && <div className="flex flex-wrap justify-center gap-4 my-8">
             {technologies && technologies.map((tech, index) => (
-                <span key={index} className="bg-yellow-500 px-3 py-1.5 rounded-full font-nudista text-xs">{tech}</span>
+                <span key={index} className="bg-yellow-500 px-3 py-1.5 rounded-full font-nudista text-xs text-neutral-900">{tech}</span>
             ))}
         </div>}
 
