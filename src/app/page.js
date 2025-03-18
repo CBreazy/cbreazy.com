@@ -43,7 +43,7 @@ export default function Home() {
 
         {/* plate-calculator */}
         <Project
-          title="Plate Calculator"
+          title="Plate Calculator (2025)"
           screenshots={[
             {
               src: "/assets/images/projects/plate-calculator/plate-calculator-og.png",
@@ -77,7 +77,7 @@ export default function Home() {
 
         {/* ------------ xenith.com --------------- */}
         <Project
-          title="Xenith.com Migration & UI Facelift"
+          title="Xenith.com Migration & UI Facelift (2022 - 2025)"
           screenshots={[
             {
               src: "/assets/images/projects/xenith.com/home_desktop.jpg",
