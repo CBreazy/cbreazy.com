@@ -82,18 +82,6 @@ export default function Home() {
             {
               src: "/assets/images/projects/xenith.com/home_desktop.jpg",
               alt: "Xenith.com Home Screenshot",
-            },
-            {
-              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
-              alt: "Xenith.com Home Mobile Screenshot",
-            },
-            {
-              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
-              alt: "Xenith.com Home Screenshot",
-            },
-            {
-              src: "/assets/images/projects/xenith.com/home_desktop.jpg",
-              alt: "Xenith.com Home Screenshot",
             }
           ]}
           subheading="Migrate flagship B2C ecom site Xenith.com from Shopify to Craft CMS, improving performance and user experience."
