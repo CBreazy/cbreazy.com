@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThumbnailGallery from "@/components/ThumbnailGallery";
 // components/Project.js
 export default function Project({ title, screenshots, subheading, technologies, integrations, description }) {
     return (
@@ -7,6 +8,12 @@ export default function Project({ title, screenshots, subheading, technologies, 
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         {/* subheading */}
         <p className="mb-4"><span className="font-bold">Task: </span>{subheading}</p>
+
+        {screenshots && screenshots.length > 0 && (
+        <div className="mb-4">
+          <ThumbnailGallery images={screenshots} />
+        </div>
+      )}
 
         {/* technologies & integrations*/}
         {technologies && <hr className="mb-4" />}
@@ -22,7 +29,7 @@ export default function Project({ title, screenshots, subheading, technologies, 
 
         {/* description */}
         {description && <hr className="mb-4" />}
-        {description && <p className="mb-4">{description}</p>}
+        {description && <div className="mb-4">{description}</div>}
 
         {/* screenshots */}
         <div className="flex flex-1 flex-wrap gap-4">
