@@ -109,7 +109,7 @@ export default function Home() {
               <br/>
               <p>When the front-end work stabilized, I identified opportunities to contribute to the back-end and took on tasks like handling various API integrations, writing Twig extensions, POSTing to Controllers and writing services to process that data, as well as other server side logic to extend Craft CMS. This allowed me to contribute to both the user-facing and server-side aspects of the project, ensuring a robust and efficient e-commerce platform.</p>
               <br/>
-              <p>I also learned a ton! On the technical side of things there was only a two man team to deliver this and an accompanying B2B portal (which due to NDA's I can't discuss). Because of this small team, I sat-in on all the architecture brainstorming for the entire multi-site project and contributed where approppriate. This was a more "traditional" LAMP stack which is not very popular anymore. The new ecommerce site launched in 2023 and was supported through the end of 2024.</p>
+              <p>I also learned a ton! On the technical side of things there was only a two man team to deliver this and an accompanying B2B portal (which due to NDA&apos;s I can&apos;t discuss). Because of this small team, I sat-in on all the architecture brainstorming for the entire multi-site project and contributed where approppriate. This was a more &quot;traditional&quot; LAMP stack which is not very popular anymore. The new ecommerce site launched in 2023 and was supported through the end of 2024.</p>
             </div>
           }
         />
