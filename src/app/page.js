@@ -22,9 +22,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">Chris Brown</h1>
         <p className="text-lg mb-8">Full Stack Developer | UI/UX Specialist</p>
         <p className="text-base mb-8 max-w-2xl">
-          A full stack developer specializing in frontend UI development and
-          design. Over five years of experience building visually appealing and
-          high-performance web applications.
+          A creative and detail-oriented web developer with a passion for crafting engaging user experiences. My journey into development is built upon a decade of experience in graphic arts and design, providing a unique perspective on aesthetics and functionality.
         </p>
         {/* email */}
         <a
@@ -164,18 +162,25 @@ export default function Home() {
             ));
           })()}
           {/* Add more skills as needed */}
+          {/* Design Tools */}
+          {(() => {
+            const designTools = [
+              "Adobe Photoshop",
+              "Adobe Illustrator",
+              "Adobe InDesign",
+              "Adobe XD",
+            ];
+            return designTools.map((skill) => (
+              <SkillPill key={skill} skill={skill} />
+            ));
+          })()}
         </div>
       </section>
 
       <section className="mb-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-base max-w-2xl">
-          I am a full stack developer with a passion for creating exceptional
-          user interfaces and experiences. With a strong foundation in both
-          frontend and backend technologies, I deliver comprehensive web
-          solutions that are both functional and visually stunning. Most of all,
-          I am a problem solver and task oriented person. I am always eager to
-          learn new technologies and improve my skills. I am also a real human!
+          I&apos;m a web developer driven by a desire to create visually appealing and effective digital solutions. Before transitioning to development, I spent 10 years working in an art department as a graphic artist and designer, honing my skills in visual communication, layout, and design principles. This background now informs my approach to front-end development, where I strive to combine technical expertise with a strong design sensibility.
         </p>
       </section>
 
