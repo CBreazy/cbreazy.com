@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import ThumbnailGallery from "@/components/ThumbnailGallery";
 // components/Project.js
 export default function Project({ title, screenshots, subheading, technologies, integrations, description }) {
     return (
