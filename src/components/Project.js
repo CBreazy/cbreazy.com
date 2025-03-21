@@ -1,49 +1,54 @@
 import Image from "next/image";
-// components/Project.js
-export default function Project({ title, screenshots, subheading, technologies, integrations, description }) {
-    return (
-      <div className="w-full mb-12">
-        {/* title */}
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        {/* subheading */}
-        <p className="mb-4"><span className="font-bold">Task: </span>{subheading}</p>
+import SkillPill from "@/components/SkillPill";
+import { PortableText } from '@portabletext/react';
 
-        {/* {screenshots && screenshots.length > 0 && (
-          <div className="mb-4">
-            <ThumbnailGallery images={screenshots} />
+export default function Project({ title, screenshots, description, subheading, technologies, integrations }) {
+  return (
+    <div className="mb-12">
+      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+      {subheading && <h4 className="text-lg italic mb-2">{subheading}</h4>}
+
+      {screenshots && screenshots.length > 0 && (
+        <div className="mb-4">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {screenshots.map((image, index) => (
+              <div key={index} style={{ width: '150px', height: '100px', cursor: 'pointer' }}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={150}
+                  height={100}
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            ))}
           </div>
-        )} */}
-
-        {/* technologies & integrations*/}
-        {technologies && <hr className="mb-4" />}
-        {technologies && <div className="flex flex-wrap justify-center gap-4 my-8">
-            {technologies && technologies.map((tech, index) => (
-                <span key={index} className="bg-yellow-500 px-3 py-1.5 rounded-full text-sm text-neutral-900">{tech}</span>
-            ))}
-
-            {integrations && integrations.map((integration, index) => (
-                <span key={index} className="bg-purple-800 px-3 py-1.5 rounded-full text-sm text-neutral-100">{integration}</span>
-            ))}
-        </div>}
-
-        {/* description */}
-        {description && <hr className="mb-4" />}
-        {description && <div className="mb-4">{description}</div>}
-
-        {/* screenshots */}
-        <div className="flex flex-1 flex-wrap gap-4">
-          {screenshots && screenshots.map((screenshot, index) => ( // Added a check for screenshots    
-            <Image
-                key={index}
-                src={screenshot.src}
-                alt={screenshot.alt}
-                className="w-full rounded-lg shadow-md"
-                loading="lazy"
-                width={800} // Adjust width as needed
-                height={300} // Adjust height as needed
-            />
-          ))}
         </div>
-      </div>
-    );
-  }
+      )}
+
+      {description && <div className="mb-4"><PortableText value={description} /></div>}
+
+      {technologies && technologies.length > 0 && (
+        <div className="mb-4">
+          <p className="font-semibold">Technologies:</p>
+          <ul className="list-disc list-inside">
+            {technologies.map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {integrations && integrations.length > 0 && (
+        <div className="mb-4">
+          <p className="font-semibold">Integrations:</p>
+          <ul className="list-disc list-inside">
+            {integrations.map((integration) => (
+              <li key={integration}>{integration}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
