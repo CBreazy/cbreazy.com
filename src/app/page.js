@@ -59,16 +59,15 @@ export default async function Home() {
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Recent Work
         </h2>
-
-        {/* plate-calculator */}
+        
         {projects.map((project) => (
           <Project
             key={project._id}
             title={project.title}
-            screenshots={project.screenshots.map((screenshot) => ({
-              src: urlFor(screenshot).url(),
-              alt: screenshot.alt,
-            }))}
+            mainImage={project.mainImage ? {
+              src: urlFor(project.mainImage).url(),
+              alt: project.mainImage.alt,
+            } : null}
             subheading={project.subheading}
             technologies={project.technologies}
             description={<PortableText value={project.description} />}
@@ -145,7 +144,7 @@ export default async function Home() {
       <section className="mb-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <div className="text-base max-w-2xl mx-auto">
-          {about && about.bio && <PortableText value={about.bio} />}
+          {about && about.paragraph2 && <PortableText value={about.paragraph2} />}
         </div>
       </section>
 
