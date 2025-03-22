@@ -70,7 +70,8 @@ export default async function Home() {
             } : null}
             subheading={project.subheading}
             technologies={project.technologies}
-            description={<PortableText value={project.description} />}
+            description={project.description}
+            integrations={project.integrations}
           />
         ))}
 

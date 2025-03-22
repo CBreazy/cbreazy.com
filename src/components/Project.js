@@ -25,7 +25,7 @@ export default function Project({ title, subheading, mainImage, description, tec
         </div>
       )}
 
-      {description && <div className="mb-4"><PortableText value={description} /></div>}
+      {description && <div className="mb-4">{description}</div>}
 
       {technologies && technologies.length > 0 && (
         <div className="mb-4">
