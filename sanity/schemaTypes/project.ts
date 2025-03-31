@@ -23,8 +23,54 @@ export default defineType({
     },
     {
       name: 'description',
-      type: 'text', // Changed to 'text' type
+      type: 'array',
       title: 'Description',
+      of: [
+        {
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H1', value: 'h1' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
+          lists: [{ title: 'Bullet', value: 'bullet' }],
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Code', value: 'code' },
+            ],
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  {
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alt text',
+              description:
+                'Important for SEO and accessibility. Leave empty if not applicable.',
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'mainImage',
@@ -43,12 +89,6 @@ export default defineType({
       name: 'technologies',
       type: 'array',
       title: 'Technologies',
-      of: [{ type: 'string' }],
-    },
-    {
-      name: 'integrations',
-      type: 'array',
-      title: 'Integrations',
       of: [{ type: 'string' }],
     },
   ],

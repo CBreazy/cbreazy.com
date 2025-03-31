@@ -39,7 +39,7 @@ export default async function Home() {
           )}
         </div>
         <h1 className="text-4xl font-bold mb-4">Chris Brown</h1>
-        <p className="text-lg mb-8">Full Stack Developer | UI/UX Specialist</p>
+        <p className="text-lg mb-8">Full Stack Developer | Frontend Specialist</p>
         <div className="text-base mb-8 max-w-2xl mx-auto">
           {about && about.bio && <PortableText value={about.bio} />}
         </div>
