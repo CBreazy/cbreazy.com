@@ -1,49 +1,71 @@
 import Image from "next/image";
-// components/Project.js
-export default function Project({ title, screenshots, subheading, technologies, integrations, description }) {
-    return (
-      <div className="w-full mb-12">
-        {/* title */}
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        {/* subheading */}
-        <p className="mb-4"><span className="font-bold">Task: </span>{subheading}</p>
+import SkillPill from "@/components/SkillPill";
+import { PortableText } from '@portabletext/react';
 
-        {/* {screenshots && screenshots.length > 0 && (
-          <div className="mb-4">
-            <ThumbnailGallery images={screenshots} />
+export default function Project({ title, subheading, technologies, description, mainImage}) {
+  return (
+    // console.log(title),
+    // console.log(subheading),
+    // console.log(technologies),
+    // console.log(description),
+    // console.log(mainImage),
+    // console.log('---'),
+
+    <div className="mb-12">
+      {/* Project Title */}
+      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+
+      {/* Project Link Button */}
+      {/* {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out mb-4 inline-block"
+        >
+          View Project
+        </a>
+      )} */}
+
+      {/* Subheading */}
+      {subheading && <h4 className="text-lg italic mb-2">{subheading}</h4>}
+
+      {/* Technologies & Integrations */}
+      {technologies && technologies.length > 0 && (
+        <div className="mb-4 border-b border-t border-gray-500 py-4">
+          <p className="sr-only">Technologies & Integrations</p>
+          <div className="flex flex-wrap justify-center gap-4 my-8">
+            {technologies.map((tech) => (
+              <SkillPill key={tech} skill={tech} bgColor='bg-yellow-500'/>
+            ))}
           </div>
-        )} */}
-
-        {/* technologies & integrations*/}
-        {technologies && <hr className="mb-4" />}
-        {technologies && <div className="flex flex-wrap justify-center gap-4 my-8">
-            {technologies && technologies.map((tech, index) => (
-                <span key={index} className="bg-yellow-500 px-3 py-1.5 rounded-full text-sm text-neutral-900">{tech}</span>
-            ))}
-
-            {integrations && integrations.map((integration, index) => (
-                <span key={index} className="bg-purple-800 px-3 py-1.5 rounded-full text-sm text-neutral-100">{integration}</span>
-            ))}
-        </div>}
-
-        {/* description */}
-        {description && <hr className="mb-4" />}
-        {description && <div className="mb-4">{description}</div>}
-
-        {/* screenshots */}
-        <div className="flex flex-1 flex-wrap gap-4">
-          {screenshots && screenshots.map((screenshot, index) => ( // Added a check for screenshots    
-            <Image
-                key={index}
-                src={screenshot.src}
-                alt={screenshot.alt}
-                className="w-full rounded-lg shadow-md"
-                loading="lazy"
-                width={800} // Adjust width as needed
-                height={300} // Adjust height as needed
-            />
-          ))}
         </div>
-      </div>
-    );
-  }
+      )}
+
+      {/* Project Description */}
+      {description && (
+        <div className="text-base mb-8 mx-auto">
+          <PortableText value={description} />
+        </div>
+      )}
+
+      {/* Main Image */}
+      {mainImage && (
+        <div className="mb-4">
+          <div className="w-full">
+            <Image
+              src={mainImage.src}
+              alt={mainImage.alt}
+              width={800}
+              height={450}
+              className="w-full h-full object-cover"
+              loading="lazy"
+              priority={false}
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
