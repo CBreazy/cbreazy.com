@@ -119,5 +119,11 @@ export default defineType({
       title: 'Sort Order',
       description: 'Determines the order in which projects are displayed.',
     },
+    {
+      name: 'projectLink',
+      type: 'url',
+      title: 'Project Link',
+      description: 'Link to the project website or repository.',
+    },
   ],
 });

@@ -73,6 +73,7 @@ export default async function Home() {
             description={project.description}
             integrations={project.integrations}
             galleryImages={project.galleryImages}
+            projectLink={project.projectLink}
           />
         ))}
 
