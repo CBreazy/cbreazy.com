@@ -91,5 +91,33 @@ export default defineType({
       title: 'Technologies',
       of: [{ type: 'string' }],
     },
+    // begin new gallery field
+    {
+      name: 'galleryImages',
+      type: 'array',
+      title: 'Gallery Images',
+      of: [
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alt text',
+              description: 'Important for SEO and accessibility.',
+            },
+          ],
+        },
+      ],
+    },
+    // project sort order field
+    // This field is used to determine the order in which projects are displayed
+    // in the project list. Projects with lower sortOrder values will appear first.
+    {
+      name: 'sortOrder',
+      type: 'number',
+      title: 'Sort Order',
+      description: 'Determines the order in which projects are displayed.',
+    },
   ],
 });

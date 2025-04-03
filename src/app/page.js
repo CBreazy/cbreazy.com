@@ -5,7 +5,7 @@ import { client, urlFor } from '../../sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 
 async function getProjects() {
-  const query = `*[_type == "project"]`;
+  const query = `*[_type == "project"] | order(sortOrder asc)`;
   const projects = await client.fetch(query);
   return projects;
 }
@@ -56,7 +56,7 @@ export default async function Home() {
 
       {/* recent projects */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-2xl font-semibold mb-4 text-center border-b">
           Recent Work
         </h2>
         
@@ -72,6 +72,7 @@ export default async function Home() {
             technologies={project.technologies}
             description={project.description}
             integrations={project.integrations}
+            galleryImages={project.galleryImages}
           />
         ))}
 

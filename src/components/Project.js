@@ -1,8 +1,9 @@
 import Image from "next/image";
 import SkillPill from "@/components/SkillPill";
 import { PortableText } from '@portabletext/react';
+import Gallery from './Gallery'; // Import the Gallery component
 
-export default function Project({ title, subheading, technologies, description, mainImage}) {
+export default function Project({ title, subheading, technologies, description, mainImage, galleryImages}) {
   return (
     // console.log(title),
     // console.log(subheading),
@@ -32,13 +33,21 @@ export default function Project({ title, subheading, technologies, description, 
 
       {/* Technologies & Integrations */}
       {technologies && technologies.length > 0 && (
-        <div className="mb-4 border-b border-t border-gray-500 py-4">
+        <div className="mb-4">
           <p className="sr-only">Technologies & Integrations</p>
           <div className="flex flex-wrap justify-center gap-4 my-8">
             {technologies.map((tech) => (
               <SkillPill key={tech} skill={tech} bgColor='bg-yellow-500'/>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Gallery */}
+      {galleryImages && galleryImages.length > 0 && (
+        <div className="mb-4">
+          <p className="sr-only">Image Gallery</p>
+          <Gallery images={galleryImages} />
         </div>
       )}
 
