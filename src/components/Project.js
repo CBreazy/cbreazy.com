@@ -15,7 +15,7 @@ export default function Project({ title, subheading, technologies, description, 
 
     <div className="mb-12">
       {/* Project Title */}
-      <div className="flex justify-center gap-4 mb-4">
+      <div className="flex gap-4 mb-4">
       <h3 className="text-2xl/10 font-semibold">{title}</h3>
       {projectLink && (
         <Link href={projectLink} target="_blank" rel="noopener noreferrer">
