@@ -24,9 +24,9 @@ export default function Gallery({ images }) {
           <div
             key={image._key}
             onClick={() => handleImageClick(image)}
-            className="w-1/2 cursor-pointer px-2 py-2"
+            className="w-full sm:w-1/2 lg:w-1/4 cursor-pointer px-2 py-2"
           >
-            <div className="w-full h-[200px] relative shadow-lg rounded-lg overflow-hidden">
+            <div className="w-full h-[200px] sm:h-[300px] relative shadow-lg rounded-lg overflow-hidden">
               <Image
                 src={urlFor(image).url()}
                 alt={image.alt}

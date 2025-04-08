@@ -56,7 +56,7 @@ export default async function Home() {
 
       {/* recent projects */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4 text-center border-b">
+        <h2 className="text-2xl font-semibold mb-8 pb-4 text-center border-b">
           Recent Work
         </h2>
         

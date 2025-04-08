@@ -13,7 +13,7 @@ export default function Project({ title, subheading, technologies, description, 
     // console.log(mainImage),
     // console.log('---'),
 
-    <div className="mb-12">
+    <div className="mb-12 border-b border-neutral-500 pb-6">
       {/* Project Title */}
       <div className="flex gap-4 mb-4">
       <h3 className="text-2xl/10 font-semibold">{title}</h3>
@@ -26,6 +26,13 @@ export default function Project({ title, subheading, technologies, description, 
 
       {/* Subheading */}
       {subheading && <h4 className="text-lg italic mb-2">{subheading}</h4>}
+
+      {/* Project Description */}
+      {description && (
+        <div className="text-base mb-8 mx-auto">
+          <PortableText value={description} />
+        </div>
+      )}
 
       {/* Technologies & Integrations */}
       {technologies && technologies.length > 0 && (
@@ -47,15 +54,8 @@ export default function Project({ title, subheading, technologies, description, 
         </div>
       )}
 
-      {/* Project Description */}
-      {description && (
-        <div className="text-base mb-8 mx-auto">
-          <PortableText value={description} />
-        </div>
-      )}
-
       {/* Main Image */}
-      {mainImage && (
+      {/* {mainImage && (
         <div className="lg:max-w-2xl lg:mx-auto mb-4">
           <div className="w-full">
             <Image
@@ -70,7 +70,7 @@ export default function Project({ title, subheading, technologies, description, 
             />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
