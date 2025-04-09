@@ -26,7 +26,7 @@ export default function Gallery({ images }) {
             onClick={() => handleImageClick(image)}
             className="w-full sm:w-1/2 lg:w-1/4 cursor-pointer px-2 py-2"
           >
-            <div className="w-full h-[200px] sm:h-[300px] relative shadow-lg rounded-lg overflow-hidden">
+            <div className="w-full h-[200px] sm:h-[300px] relative shadow-lg rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
               <Image
                 src={urlFor(image).url()}
                 alt={image.alt}
