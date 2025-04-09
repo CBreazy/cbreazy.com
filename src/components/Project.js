@@ -3,6 +3,7 @@ import SkillPill from "@/components/SkillPill";
 import { PortableText } from '@portabletext/react';
 import Gallery from './Gallery';
 import Link from 'next/link';
+import { urlFor } from '../../sanity/lib/client';
 
 export default function Project({ title, subheading, technologies, description, mainImage, galleryImages, projectLink}) {
   return (
@@ -19,7 +20,7 @@ export default function Project({ title, subheading, technologies, description, 
       <h3 className="text-2xl/10 font-semibold">{title}</h3>
       {projectLink && (
         <Link href={projectLink} target="_blank" rel="noopener noreferrer">
-          <button className="bg-neutral-700 mx-auto block hover:bg-neutral-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">view project</button>
+          <button className="bg-neutral-700 mx-auto block hover:bg-neutral-900 cursor-pointer text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">view project</button>
         </Link>
       )}
       </div>
@@ -40,7 +41,7 @@ export default function Project({ title, subheading, technologies, description, 
           <p className="sr-only">Technologies & Integrations</p>
           <div className="flex flex-wrap justify-center gap-4 my-8">
             {technologies.map((tech) => (
-              <SkillPill key={tech} skill={tech} bgColor='bg-yellow-500'/>
+              <SkillPill key={tech} skill={tech}/>
             ))}
           </div>
         </div>
@@ -55,12 +56,12 @@ export default function Project({ title, subheading, technologies, description, 
       )}
 
       {/* Main Image */}
-      {/* {mainImage && (
+      {mainImage && (
         <div className="lg:max-w-2xl lg:mx-auto mb-4">
           <div className="w-full">
             <Image
-              src={mainImage.src}
-              alt={mainImage.alt}
+              src={mainImage?.asset ? urlFor(mainImage).url() : ''}
+              alt={mainImage?.alt || 'Project Main Image'}
               width={800}
               height={450}
               className="w-full h-full object-cover"
@@ -70,7 +71,7 @@ export default function Project({ title, subheading, technologies, description, 
             />
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 }

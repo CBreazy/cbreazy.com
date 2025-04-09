@@ -5,7 +5,7 @@ import { client, urlFor } from '../../sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 
 async function getProjects() {
-  const query = `*[_type == "project"] | order(sortOrder asc)`;
+  const query = `*[_type == "project"] | order(sortOrder desc)`;
   const projects = await client.fetch(query);
   return projects;
 }
@@ -64,10 +64,7 @@ export default async function Home() {
           <Project
             key={project._id}
             title={project.title}
-            mainImage={project.mainImage ? {
-              src: urlFor(project.mainImage).url(),
-              alt: project.mainImage.alt,
-            } : null}
+            mainImage={project.mainImage}
             subheading={project.subheading}
             technologies={project.technologies}
             description={project.description}
