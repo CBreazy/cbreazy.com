@@ -177,3 +177,6 @@ export default async function Home() {
     </main>
   );
 }
+
+// Incremental Static Regeneration (ISR) for updating content more regularly from Sanity.io
+export const revalidate = 60; // Regenerate every 60 seconds
