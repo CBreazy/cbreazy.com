@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-24">
       {/* bio */}
-      <section className="mb-16">
+      <section className="mb-16 w-full ">
         <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-8">
           {/* headshot */}
           {about && about.headshot && (
@@ -40,7 +40,7 @@ export default async function Home() {
         </div>
         <h1 className="text-4xl font-bold mb-4">Chris Brown</h1>
         <p className="text-lg mb-8">Full Stack Developer | Frontend Specialist</p>
-        <div className="text-base mb-8 max-w-2xl mx-auto">
+        <div className="text-base mb-8">
           {about && about.bio && <PortableText value={about.bio} />}
         </div>
         {/* email */}
