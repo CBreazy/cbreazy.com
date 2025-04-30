@@ -20,7 +20,7 @@ export default function Project({ title, subheading, technologies, description, 
         <h3 className="text-2xl/10 font-semibold">{title}</h3>
         {projectLink && (
           <Link href={projectLink} target="_blank" rel="noopener noreferrer">
-            <button className="bg-neutral-700 block hover:bg-neutral-900 cursor-pointer text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">view project</button>
+            <button className="bg-green-700 block hover:bg-green-800 cursor-pointer text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">view project</button>
           </Link>
         )}
       </div>

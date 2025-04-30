@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-24">
       {/* bio */}
-      <section className="text-center mb-16">
+      <section className="mb-16">
         <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-8">
           {/* headshot */}
           {about && about.headshot && (
