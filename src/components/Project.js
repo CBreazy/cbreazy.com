@@ -57,7 +57,7 @@ export default function Project({ title, subheading, technologies, description, 
 
       {/* Main Image */}
       {mainImage && (
-        <div className="lg:max-w-2xl lg:mx-auto mb-4">
+        <div className="mb-4">
           <div className="w-full">
             <Image
               src={mainImage?.asset ? urlFor(mainImage).url() : ''}

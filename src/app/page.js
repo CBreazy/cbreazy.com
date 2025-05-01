@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-24">
       {/* bio */}
-      <section className="mb-16 w-full ">
+      <section className="mb-16 max-w-4xl">
         <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-8">
           {/* headshot */}
           {about && about.headshot && (
@@ -47,7 +47,7 @@ export default async function Home() {
         {about && about.contactInfo && (
           <a
             href={`mailto:${about.contactInfo.email}`}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+            className="block text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
           >
             Contact Me
           </a>
@@ -55,7 +55,7 @@ export default async function Home() {
       </section>
 
       {/* recent projects */}
-      <section className="mb-16">
+      <section className="mb-16 max-w-4xl">
         <h2 className="text-2xl font-semibold mb-8 pb-4 text-center border-b">
           Recent Work
         </h2>
@@ -77,7 +77,7 @@ export default async function Home() {
       </section>
 
       {/* skills */}
-      <section className="mb-16 text-center">
+      <section className="mb-16 text-center max-w-4xl">
         <h2 className="text-2xl font-semibold mb-4">Key Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Frontend Skills */}
